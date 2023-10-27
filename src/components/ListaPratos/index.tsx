@@ -10,18 +10,17 @@ const ListaPratos = ({ pratos }: Props) => (
   <>
     <div className="container">
       <ContainerPratos>
-        {pratos &&
-          pratos.map((prato) => (
-            <PratosLista
-              key={prato.id}
-              id={prato.id}
-              image={prato.foto}
-              title={prato.nome}
-              description={prato.descricao}
-              portion={prato.porcao}
-              price={prato.preco}
-            />
-          ))}
+        {pratos.map((prato) => (
+          <PratosLista
+            key={prato.cardapio.id}
+            id={prato.cardapio.id}
+            image={prato.cardapio.foto}
+            title={prato.cardapio.nome}
+            description={prato.cardapio.descricao}
+            portion={prato.cardapio.porcao}
+            price={prato.cardapio.preco}
+          />
+        ))}
       </ContainerPratos>
     </div>
   </>

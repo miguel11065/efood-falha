@@ -12,9 +12,6 @@ import {
 } from './styles'
 import estrela from '../../assets/images/estrela.svg'
 import { Link } from 'react-router-dom'
-// import { useEffect, useState } from 'react'
-// import { RestaurantesAPI } from '../../pages/Home'
-// import { PratosAPI } from '../../pages/Restaurante'
 
 type Props = {
   title: string
@@ -33,14 +30,6 @@ const Restaurantes = ({
   image,
   id
 }: Props) => {
-  // const [pratos, setPratos] = useState<PratosAPI[]>([])
-
-  // useEffect(() => {
-  //   fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
-  //     .then((res) => res.json())
-  //     .then((res) => setPratos(res))
-  // }, [id])
-
   return (
     <Card>
       <Tag>{infos}</Tag>

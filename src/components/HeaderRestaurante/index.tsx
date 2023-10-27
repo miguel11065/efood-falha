@@ -5,18 +5,12 @@ import bannerImg from '../../assets/images/banner.png'
 import { useEffect, useState } from 'react'
 import { RestaurantesAPI } from '../../pages/Home'
 
-// type Props = {
-//   capa: string
-//   tipo: string
-//   titulo: string
-// }
-
 const HeaderRestaurante = () => {
   const { id } = useParams()
   const [restBanner, setRestBanner] = useState<RestaurantesAPI>()
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/`)
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
       .then((res) => res.json())
       .then((res) => setRestBanner(res))
   }, [id])
